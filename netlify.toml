@@ -1,0 +1,13 @@
+[build]
+publish = "."
+functions = "netlify/functions"
+
+[[redirects]]
+from = "/api/peptides"
+to = "/.netlify/functions/peptides"
+status = 200
+
+[[redirects]]
+from = "/api/peptides/*"
+to = "/.netlify/functions/peptides/:splat"
+status = 200
